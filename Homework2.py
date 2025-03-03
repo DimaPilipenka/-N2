@@ -90,9 +90,13 @@ else:
 
 import string
 def longest_word(sentence):
+# Удаляем знаки препинания из предложения
     translator = str.maketrans('','', string.punctuation)
     cleaned_sentence = sentence.translate(translator)
+# Разбиваем предложение на слова
     words = cleaned_sentence.split()
+
+ # Находим самое длинное слово
     longest = max(words, key=len)
     return longest
 
